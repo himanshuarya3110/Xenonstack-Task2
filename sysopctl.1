@@ -1,0 +1,91 @@
+.SH NAME
+sysopctl \- A custom Linux utility for managing system services and resources.
+
+.SH SYNOPSIS
+.B sysopctl
+[\fB--help\fR] [\fB--version\fR] \fIcommand\fR [\fIoptions\fR] \fIarguments\fR
+
+.SH DESCRIPTION
+.B sysopctl
+is a comprehensive tool designed to streamline the management of system services, processes, disk usage, and overall system health. It offers an intuitive interface for administrators to perform routine tasks with ease.
+
+.SH COMMANDS
+.TP
+.B service list
+Displays a list of all running services on the system.
+
+.TP
+.B service start <service-name>
+Starts the specified service if it is not already running.
+
+.TP
+.B service stop <service-name>
+Stops the specified service if it is currently active.
+
+.TP
+.B system load
+Shows the current system load, providing average CPU and system performance over time.
+
+.TP
+.B disk usage
+Provides a detailed overview of disk space usage across all partitions.
+
+.TP
+.B process monitor
+Enables real-time monitoring of active system processes.
+
+.TP
+.B logs analyze
+Retrieves and summarizes critical log entries from recent system activities.
+
+.TP
+.B backup <path>
+Initiates a backup of files from the specified directory to a designated backup location.
+
+.SH OPTIONS
+.TP
+.B --help
+Displays a detailed help message with available commands and usage information.
+
+.TP
+.B --version
+Displays the current version of \fBsysopctl\fR.
+
+.SH EXAMPLES
+.TP
+.B sysopctl service list
+Outputs a list of currently running system services.
+
+.TP
+.B sysopctl service start apache2
+Starts the Apache2 web server service.
+
+.TP
+.B sysopctl service stop apache2
+Stops the Apache2 web server service.
+
+.TP
+.B sysopctl system load
+Shows the system load averages for the last 1, 5, and 15 minutes.
+
+.TP
+.B sysopctl disk usage
+Displays disk usage statistics for all mounted partitions.
+
+.TP
+.B sysopctl process monitor
+Begins real-time monitoring of system processes and their resource consumption.
+
+.TP
+.B sysopctl logs analyze
+Fetches and summarizes critical error logs from the system.
+
+.TP
+.B sysopctl backup /home/user
+Initiates a backup of the contents of the \fB/home/user\fR directory.
+
+.SH VERSION
+v0.1.0
+
+.SH SEE ALSO
+systemctl(1), uptime(1), df(1), top(1), journalctl(1), rsync(1)
